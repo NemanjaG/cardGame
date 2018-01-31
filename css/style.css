@@ -59,3 +59,7 @@ li {
   box-shadow:inset 0px 0px 0px 10px Gainsboro ;
   background-color: white;
 }
+
+.active.hide {
+  background-color: none!important;
+}

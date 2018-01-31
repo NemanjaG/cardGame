@@ -26,7 +26,7 @@ function buildGame(element, data) {
 
   element.forEach(function(element) {
 
-    var item = color[Math.floor(Math.random()*color.length)];
+    item = color[Math.floor(Math.random()*color.length)];
 
     element.className = 'loaded ' + item;
 
@@ -35,23 +35,21 @@ function buildGame(element, data) {
 
   });
 
-  // show card color.
+  // match card color.
   function showCard() {
     for (var x in element) {
-      for (i = 0; i < 2; i++) {
-        if(i === 0) {
+      element[x].addEventListener('click', clicked);
 
-          element[x].addEventListener('click', clicked);
+      function clicked(){
+        this.className += " " + "active";
 
-          function clicked(secondClick){
-            this.className += " " + 'active';
-            secondClick();
+        var clickedFirst =  document.querySelectorAll('#items .active');
+
+          if (clickedFirst[0].className === clickedFirst[1].className) {
+            console.log('isti su');
+            clickedFirst[0].className += " " + "hide";
+            clickedFirst[1].className += " " + "hide";
           }
-        }
-
-        function secondClick(){
-          console.log('nemanja');
-        }
       }
     }
   };
