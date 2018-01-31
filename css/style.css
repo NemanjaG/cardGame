@@ -1,0 +1,61 @@
+ul {
+  max-width: 800px;
+  width: 800px;
+  display: block;
+  margin: 0 auto;
+}
+
+li {
+  max-width: 200px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  display: block;
+  vertical-align: center;
+  float: left;
+  cursor: pointer;
+}
+
+.red.active {
+  background-color: red;
+}
+
+.blue.active {
+  background-color: blue;
+}
+
+.green.active {
+  background-color: green;
+}
+
+.black.active {
+  background-color: black;
+}
+
+.yellow.active {
+  background-color: yellow;
+}
+
+.orange.active {
+  background-color: orange;
+}
+
+.purple.active {
+  background-color: purple;
+}
+
+.cyan.active {
+  background-color: cyan;
+}
+
+.red,
+.blue,
+.green,
+.black,
+.yellow,
+.orange,
+.purple,
+.cyan {
+  box-shadow:inset 0px 0px 0px 10px Gainsboro ;
+  background-color: white;
+}
